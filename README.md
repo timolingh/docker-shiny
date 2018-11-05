@@ -1,4 +1,9 @@
-This repo is sourced from [](https://github.com/QuantumObject/docker-shiny)
+This repo is sourced from (https://github.com/QuantumObject/docker-shiny)
+
+Create a persistent volume
+```
+docker volume create shiny-server
+```
 
 Connect to a docker user defined network `my-net`
 ```
@@ -8,9 +13,10 @@ docker create --name shiny \
   --mount source=shiny-server,target=/srv/shiny-server \
   shiny-server
 
-docker run shiny
+docker start shiny
 ```
 
+The information below comes from the original repo
 ----
 # docker-shiny
 
