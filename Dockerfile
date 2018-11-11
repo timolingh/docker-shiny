@@ -25,7 +25,12 @@ RUN R -e "install.packages('shiny', repos='http://cran.rstudio.com/')" \
           && mkdir -p  /srv/shiny-server/examples; sync \
           && cp -R /usr/local/lib/R/site-library/shiny/examples/* /srv/shiny-server/examples/.
 
+# Other R packages
 RUN  R -e "install.packages('rmarkdown', repos='http://cran.rstudio.com/')"
+RUN  R -e "install.packages('data.table', repos='http://cran.rstudio.com/')"
+RUN  R -e "install.packages('ggplot2', repos='http://cran.rstudio.com/')"
+RUN  R -e "install.packages('DT', repos='http://cran.rstudio.com/')"
+RUN  R -e "install.packages('scales', repos='http://cran.rstudio.com/')"
 
 ##startup scripts
 #Pre-config scrip that may be needed to be run one time only when the container run the first time .. using a flag to don't
@@ -41,6 +46,9 @@ RUN chmod +x /etc/service/shiny-server/run  \
     && cp /var/log/cron/config /var/log/shiny-server/ \
     && chown -R shiny /var/log/shiny-server \
     && sed -i '113 a <h2><a href="./examples/">Other examples of Shiny application</a> </h2>' /srv/shiny-server/index.html
+
+## copy the app
+#COPY simpleportfoliomc /srv/shiny-server/simpleportfoliomc
 
 #volume for Shiny Apps and static assets. Here is the folder for index.html (link) and sample apps.
 VOLUME /srv/shiny-server

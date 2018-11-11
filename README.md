@@ -1,5 +1,10 @@
 This repo is sourced from (https://github.com/QuantumObject/docker-shiny)
 
+Build the container image
+```
+docker build -t shiny-server .
+```
+
 Create a persistent volume
 ```
 docker volume create shiny-server
