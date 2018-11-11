@@ -47,8 +47,9 @@ RUN chmod +x /etc/service/shiny-server/run  \
     && chown -R shiny /var/log/shiny-server \
     && sed -i '113 a <h2><a href="./examples/">Other examples of Shiny application</a> </h2>' /srv/shiny-server/index.html
 
-## copy the app
-#COPY simpleportfoliomc /srv/shiny-server/simpleportfoliomc
+## copy the demo app
+RUN mkdir -p /srv/shiny-server/simpleportfoliomc
+COPY simpleportfoliomc/app.R /srv/shiny-server/simpleportfoliomc/
 
 #volume for Shiny Apps and static assets. Here is the folder for index.html (link) and sample apps.
 VOLUME /srv/shiny-server

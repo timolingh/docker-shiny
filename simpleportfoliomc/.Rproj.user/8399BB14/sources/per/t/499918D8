@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1537853491296.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3312807976",
+    "id" : "499918D8",
+    "lastKnownWriteTime" : 1538028319,
+    "last_content_update" : 1538028319768,
+    "path" : "~/github/simpleportfoliomc/app.R",
+    "project_path" : "app.R",
+    "properties" : {
+        "cursorPosition" : "148,43",
+        "scrollLine" : "138"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

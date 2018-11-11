@@ -1,0 +1,9 @@
+{
+    "path" : "~/github/simpleportfoliomc",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
